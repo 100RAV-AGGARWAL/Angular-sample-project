@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>Signup</h2>
+<mat-dialog-content>
+	<mat-form-field appearance="fill">
+		<input matInput placeholder="Email" [(ngModel)]="details.email">
+	</mat-form-field>
+	<br>
+	<mat-form-field appearance="fill">
+		<input matInput placeholder="Password" [(ngModel)]="details.password">
+	</mat-form-field>
+	<br>
+	<mat-form-field appearance="fill">
+		<input matInput placeholder="Confirm password" [(ngModel)]="details.confirmPassword">
+	</mat-form-field>
+
+</mat-dialog-content>
+<mat-dialog-actions>
+	<button mat-button (click)="onNoClick()">Cancel</button>
+	<button mat-button [mat-dialog-close]="details" cdkFocusInitial>Signup</button>
+</mat-dialog-actions>
